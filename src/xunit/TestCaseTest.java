@@ -6,23 +6,10 @@ public class TestCaseTest extends TestCase{
         super(name);
     }
 
-    WasRun wasRun;
-
-    @Override
-    public void beforeEach() {
-        wasRun = new WasRun("testMethod");
-    }
-
-    public void testRunning() {
-        Assert.assertEquals(false, wasRun.wasRun);
+    public void templateMethod() {
+        WasRun wasRun = new WasRun("testMethod");
         wasRun.run();
-        Assert.assertEquals(true, wasRun.wasRun);
-    }
-
-    public void testBeforeEach() {
-        Assert.assertEquals(false, wasRun.wasBeforeEach);
-        wasRun.run();
-        Assert.assertEquals(true, wasRun.wasBeforeEach);
+        Assert.assertEquals("beforeEach testMethod afterEach", wasRun.log);
     }
 
 }
