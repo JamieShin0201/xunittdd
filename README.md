@@ -7,3 +7,4 @@
 - [X] 테스트 결과 수집
 - [X] 여러 테스트 추가 가능 (TestCase, TestSuite)
 - [X] test로 시작하는 클래스는 자동으로 testSuite에 추가되도록 구현
+- [X] @Test annotation 생성 및 적용
