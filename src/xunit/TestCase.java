@@ -11,11 +11,16 @@ public class TestCase {
     }
 
     public void run() {
+        beforeEach();
         try {
             Method method = getClass().getMethod(name);
             method.invoke(this);
         } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void beforeEach() {
+
     }
 }
