@@ -13,7 +13,7 @@ public class TestCaseTest extends TestCase{
     }
 
     @Test
-    public void testTemplateMethod() {
+    public void TemplateMethod() {
         WasRun wasRun = new WasRun("testMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
@@ -21,7 +21,7 @@ public class TestCaseTest extends TestCase{
     }
 
     @Test
-    public void testResult() {
+    public void Result() {
         WasRun wasRun = new WasRun("testMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
@@ -29,14 +29,15 @@ public class TestCaseTest extends TestCase{
     }
 
     @Test
-    public void testFailedResultFormatting() {
+    public void FailedResultFormatting() {
         TestResult result = new TestResult();
         result.testStarted();
         result.testFailed();
         Assert.assertEquals("1 run, 1 failed", result.getSummary());
     }
 
-    public void testFailedResult() {
+    @Test
+    public void FailedResult() {
         WasRun wasRun = new WasRun("testBrokenMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
@@ -44,7 +45,7 @@ public class TestCaseTest extends TestCase{
     }
 
     @Test
-    public void testSuite() {
+    public void Suite() {
         TestSuite suite = new TestSuite();
         suite.add(new WasRun("testMethod"));
         suite.add(new WasRun("testBrokenMethod"));
